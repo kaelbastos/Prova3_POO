@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="396.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentWindowController">
+   <children>
+      <GridPane hgap="10.0" layoutX="9.0" layoutY="9.0" prefHeight="331.0" prefWidth="384.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="600.0" minWidth="274.0" prefWidth="274.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="228.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="276.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Employee:" />
+            <Label text="Animal:" GridPane.rowIndex="1" />
+            <Label text="Owner name:" GridPane.rowIndex="2" />
+            <Label text="Owner Phone:" GridPane.rowIndex="3" />
+            <Label text="Date:" GridPane.rowIndex="6" />
+            <ChoiceBox fx:id="serviceChoice" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Price:" GridPane.rowIndex="5" />
+            <Label text="Service:" GridPane.rowIndex="4" />
+            <TextField fx:id="animalName" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="ownerName" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="ownerPhone" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="price" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="employeeChoice" maxWidth="600.0" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" />
+            <Slider fx:id="hourSlider" blockIncrement="1.0" majorTickUnit="1.0" max="18.0" min="8.0" minorTickCount="0" prefHeight="53.0" prefWidth="274.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Slider fx:id="minuteSlider" blockIncrement="15.0" majorTickUnit="10.0" max="50.0" minorTickCount="0" prefHeight="38.0" prefWidth="600.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="Hour:" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+            <Label text="Minute:" GridPane.rowIndex="8" />
+            <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <HBox alignment="BOTTOM_RIGHT" layoutX="200.0" layoutY="347.0" prefHeight="53.0" prefWidth="200.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" text="Update" />
+            <Button fx:id="closeButton" cancelButton="true" mnemonicParsing="false" onAction="#close" text="Close" HBox.hgrow="NEVER" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
